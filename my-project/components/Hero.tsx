@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { useTypewriter } from "react-simple-typewriter";
 
-type Props = {}
+type Props = {};
 
 export const Hero = (props: Props) => {
+  const [text, count] = useTypewriter({
+    words: ["Kamil", "Dzirba", "Gej"],
+    loop: true,
+    delaySpeed: 2000,
+  });
   return (
-    <div>Hero</div>
-  )
-}
+    <div>
+        
+      <h1>
+        <span>{text}</span>
+      </h1>
+    </div>
+  );
+};
